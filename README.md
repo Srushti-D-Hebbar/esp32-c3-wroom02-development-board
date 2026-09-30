@@ -7,7 +7,7 @@ The board provides USB-C power and data connectivity, 3.3 V regulation, boot/res
 ---
 ## Overview
 
-This project focuses on the complete hardware design of a compact ESP32-C3 development board, covering the process from schematic design and component selection to multi-layer PCB layout and design-rule validation.
+This project covers the complete hardware design of a compact ESP32-C3 development board, from schematic design and component selection to multi-layer PCB layout and design-rule validation.
 
 The board integrates:
 
@@ -107,31 +107,9 @@ Two pin headers provide access to selected ESP32-C3 GPIO pins along with power a
 
 The schematic was designed in KiCad 10 and organized into functional blocks for power, USB-C, ESP32-C3, boot/reset, GPIO expansion, clock, and decoupling circuitry.
 
-![ESP32-C3-WROOM-02 Schematic](images/schematic.png)
+![ESP32-C3-WROOM-02 Schematic](./images/esp32-c3-mini_sch.png)
 
 ---
-## PCB Design
-
-The board uses a **4-layer PCB stackup** to provide additional routing flexibility and internal copper layers.
-
-### PCB Stackup
-
-| Physical Layer | KiCad Layer | Description |
-|---|---|---|
-| Layer 1 | F.Cu | Top copper |
-| Layer 2 | In1.Cu | Inner copper layer 1 |
-| Layer 3 | In2.Cu | Inner copper layer 2 |
-| Layer 4 | B.Cu | Bottom copper |
-
----
-## Schematic
-
-The schematic was designed in KiCad 10 and organized into functional blocks for power, USB-C, ESP32-C3, boot/reset, GPIO expansion, clock, and decoupling circuitry.
-
-![ESP32-C3-WROOM-02 Schematic](images/esp32-c3-mini%20sch.png)
-
----
-
 ## PCB Design
 
 The board uses a **4-layer PCB stackup** to provide additional routing flexibility and internal copper layers.
@@ -150,40 +128,40 @@ The board uses a **4-layer PCB stackup** to provide additional routing flexibili
 
 ### Front View
 
-![3D Front View](images/esp32_c3_mini_front.png)
+![3D Front View](./images/esp32_c3_mini_front.png)
 
 The front 3D view showing the ESP32-C3-WROOM-02 module, USB-C interface, GPIO headers, buttons, and other components.
 
 ### Back View
 
-![3D Back View](images/esp32_c3_mini_back.png)
+![3D Back View](./images/esp32_c3_mini_back.png)
 
-The back 3D view showing the bottom side of the PCB and its components/routing.
+The back 3D view showing the bottom side of the PCB and its components.
 
 ---
 ## Copper Layer Layout
 
 ### Front Copper — F.Cu
 
-![Front Copper Layer](images/esp32_c3_mini_layout_front.png)
+![Front Copper Layer](./images/esp32_c3_mini_layout_front.png)
 
 The top copper layer showing component-side routing and copper distribution.
 
 ### Inner Copper Layer 1 — In1.Cu
 
-![Inner Copper Layer 1](images/esp32_c3_mini_inner_copper1.png)
+![Inner Copper Layer 1](./images/esp32_c3_mini_inner_copper1.png)
 
 The first internal copper layer of the 4-layer PCB, showing the copper distribution and routing on `In1.Cu`.
 
 ### Inner Copper Layer 2 — In2.Cu
 
-![Inner Copper Layer 2](images/esp32_c3_mini_inner_copper2.png)
+![Inner Copper Layer 2](./images/esp32_c3_mini_inner_copper2.png)
 
 The second internal copper layer of the 4-layer PCB, showing the copper distribution and routing on `In2.Cu`.
 
 ### Back Copper — B.Cu
 
-![Back Copper Layer](images/esp32_c3_mini_layout_back.png)
+![Back Copper Layer](./images/esp32_c3_mini_layout_back.png)
 
 The bottom copper layer showing the bottom-side routing and copper distribution.
 
@@ -192,7 +170,9 @@ The bottom copper layer showing the bottom-side routing and copper distribution.
 
 A dedicated keep-out region is maintained around the ESP32-C3-WROOM-02 antenna.
 
-The antenna area is kept clear of copper and other conductive structures to maintain the required clearance around the RF antenna region.---
+The antenna area is kept clear of copper and other conductive structures to maintain the required clearance around the RF antenna region.
+
+---
 ## PCB Specifications
 
 | Parameter | Value |
@@ -226,7 +206,7 @@ The antenna area is kept clear of copper and other conductive structures to main
 
 ### 4-Layer PCB
 
-A 4-layer PCB was selected to provide additional routing flexibility and allow the use of internal copper layers for power, ground, and signal distribution as required by the design.
+A 4-layer PCB was used to provide additional routing flexibility and allow internal copper layers to be used for power, ground, and signal distribution as required by the design.
 
 ### USB Protection
 
